@@ -1,0 +1,11 @@
+CSS:
+/* Debug example: box with margin */
+.debug-box {
+    width: 150px;
+    height: 150px;
+    background-color: tomato;
+    margin: 50px auto;
+    border: 2px solid black;
+}
+HTML:
+<div class="debug-box"></div>

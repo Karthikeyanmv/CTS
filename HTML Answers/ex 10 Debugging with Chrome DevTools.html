@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <title>Debugging Example</title>
+    <style>
+        #box {
+            width: 100px; height: 100px;
+            background: red;
+            margin: 50px;
+        }
+    </style>
+</head>
+<body>
+
+<div id="box"></div>
+
+<script>
+    const box = document.getElementById('box');
+    let counter = 0;
+
+    function changeBoxColor() {
+        counter++;
+        console.log('Changing color, count:', counter);
+        if(counter % 2 === 0) {
+            box.style.backgroundColor = 'blue';
+        } else {
+            box.style.backgroundColor = 'red';
+        }
+    }
+
+    box.addEventListener('click', changeBoxColor);
+
+    // Add a deliberate error to test console debugging
+    // Uncomment below to trigger error:
+    // nonExistentFunction();
+</script>
+
+</body>
+</html>

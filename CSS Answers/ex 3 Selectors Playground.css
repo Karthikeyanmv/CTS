@@ -1,0 +1,36 @@
+/* Reset margin and padding for all elements */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Style all h2 headings */
+h2 {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #333;
+    margin-bottom: 15px;
+}
+
+/* Banner with ID selector */
+#mainHeader {
+    background-color: #007BFF;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+/* Event container cards */
+.eventCard {
+    border: 1px solid #ddd;
+    padding: 15px;
+    margin: 10px 0;
+    border-radius: 6px;
+    background-color: #fafafa;
+}
+
+/* Grouping selector for h3 and p */
+h3, p {
+    font-family: Georgia, 'Times New Roman', serif;
+    line-height: 1.4;
+}

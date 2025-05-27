@@ -1,0 +1,16 @@
+CSS:
+/* News article section with multi-columns */
+.news-article {
+    column-count: 2;
+    column-gap: 30px;
+    column-rule: 1px solid gray;
+    padding: 15px;
+    font-family: 'Georgia', serif;
+}
+
+HTML:
+<section class="news-article">
+  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent imperdiet...</p>
+  <p>Aliquam erat volutpat. Integer consectetur leo ut sem dignissim, in laoreet...</p>
+  <!-- more paragraphs -->
+</section>

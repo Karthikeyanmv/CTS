@@ -1,0 +1,26 @@
+/* Desktop navigation */
+nav ul {
+    display: flex;
+    list-style: none;
+}
+
+/* Responsive for smaller than 768px */
+@media (max-width: 767px) {
+    nav ul {
+        flex-direction: column;
+        padding-left: 0;
+    }
+
+    nav ul li {
+        padding: 10px 0;
+    }
+
+    img.responsive {
+        width: 80vw; /* flexible image width */
+        height: auto;
+    }
+
+    body {
+        font-size: 14px;
+    }
+}

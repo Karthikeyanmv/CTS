@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <title>Event Feedback</title>
+    <style>
+        img {
+            width: 150px;
+            cursor: pointer;
+            transition: transform 0.3s ease;
+        }
+        img.enlarged {
+            transform: scale(2);
+            z-index: 10;
+            position: relative;
+        }
+    </style>
+</head>
+<body>
+
+<form id="feedbackForm">
+
+    <label for="phone">Phone Number:</label>
+    <input type="tel" id="phone" name="phone" onblur="validatePhone()" placeholder="123-456-7890" />
+
+    <label for="eventSelect">Select Event:</label>
+    <select id="eventSelect" onchange="showFee()">
+        <option value="">-- Select Event --</option>
+        <option value="picnic" data-fee="10">Community Picnic - $10</option>
+        <option value="art" data-fee="15">Art Festival - $15</option>
+        <option value="run" data-fee="20">Charity Run - $20</option>
+    </select>
+    <p id="feeDisplay"></p>
+
+    <label for="feedback">Feedback:</label>
+    <textarea id="feedback" onkeyup="countChars()" rows="4" cols="30" placeholder="Write your feedback..."></textarea>
+    <p>Characters typed: <span id="charCount">0</span></p>
+
+    <button type="button" onclick="submitFeedback()">Submit Feedback</button>
+
+</form>
+
+<img src="event.jpg" alt="Event" ondblclick="toggleImageSize(this)" />
+
+<script>
+    function validatePhone() {
+        const phoneInput = document.getElementById('phone');
+        const phone = phoneInput.value;
+        const phonePattern = /^\d{3}-\d{3}-\d{4}$/;
+        if (!phonePattern.test(phone)) {
+            alert('Phone number must be in the format XXX-XXX-XXXX');
+            phoneInput.focus();
+        }
+    }
+
+    function showFee() {
+        const select = document.getElementById('eventSelect');
+        const feeDisplay = document.getElementById('feeDisplay');
+        const selectedOption = select.options[select.selectedIndex];
+        const fee = selectedOption.getAttribute('data-fee');
+        feeDisplay.textContent = fee ? `Event Fee: $${fee}` : '';
+    }
+
+    function submitFeedback() {
+        alert('Thank you for your feedback!');
+    }
+
+    function toggleImageSize(img) {
+        img.classList.toggle('enlarged');
+    }
+
+    function countChars() {
+        const feedback = document.getElementById('feedback');
+        const charCount = document.getElementById('charCount');
+        charCount.textContent = feedback.value.length;
+    }
+</script>
+
+</body>
+</html>

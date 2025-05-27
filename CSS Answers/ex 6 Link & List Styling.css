@@ -1,0 +1,32 @@
+/* Link styles */
+a:link {
+    color: #007BFF;
+    text-decoration: none;
+}
+
+a:visited {
+    color: #551A8B;
+}
+
+a:hover {
+    color: #0056b3;
+    text-decoration: underline;
+}
+
+a:active {
+    color: #004080;
+}
+
+/* Navigation menu list */
+nav ul {
+    list-style-type: none;  /* Remove bullets */
+    padding-left: 0;
+    display: flex;
+    gap: 20px;
+}
+
+/* List items padding and margin */
+nav ul li {
+    padding: 8px 12px;
+    margin: 0;
+}

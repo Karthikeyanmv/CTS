@@ -1,0 +1,40 @@
+HTML:
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>CSS Inclusion Methods</title>
+
+  <!-- Internal CSS -->
+  <style>
+    /* Body background style */
+    body {
+      background-color: #f0f8ff;
+      font-family: Arial, sans-serif;
+    }
+  </style>
+
+  <!-- External CSS -->
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <!-- Inline CSS -->
+  <h1 style="color: red;">Welcome to the Local Community Event Portal</h1>
+
+  <p class="highlight">This paragraph is styled via external stylesheet.</p>
+
+</body>
+</html>
+
+CSS:
+/* styles.css */
+
+/* Highlight paragraph */
+.highlight {
+  background-color: #e0ffff;
+  padding: 10px;
+  border-left: 4px solid #007BFF;
+}
+
